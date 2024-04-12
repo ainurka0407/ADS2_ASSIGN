@@ -7,7 +7,7 @@
  Then, it compares minInRest with the last element of the array (arr[n - 1]) and returns the smaller of the two using Math.min.
  * This will continue until it reaches the base case.
  */
-public class Main {
+public class problem1 {
     public static int findMin(int[] arr, int n){
         if(n==1){
             return arr[0];
@@ -19,7 +19,11 @@ public class Main {
         int[] array = {10,1,32,3,45};
         int n = array.length;
         int min = findMin(array,n);
+        double start = System.nanoTime();
+        double end = System.nanoTime();
+        double duration = (end - start) / 1_000_000.0;
         System.out.println("MIN FROM ARRAY IS " + min);
+        System.out.println("Time taken: " + duration + " ms");
+    }
     }
 
-}

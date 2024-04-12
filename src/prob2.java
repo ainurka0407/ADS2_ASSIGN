@@ -18,7 +18,11 @@ public class prob2 {
     public static void main(String[] args){
         int n=4;
         int [] arr = {3,2,4,1};
-        System.out.println(FindAverage(arr,n)/n);
-
+        double start = System.nanoTime();
+        double av = FindAverage(arr, n);
+        double end = System.nanoTime();
+        double duration = (end - start) / 1_000_000.0;
+        System.out.println("AVERAGE FROM ARRAY IS " + av/n);
+        System.out.println("Time taken: " + duration + " ms");
     }
 }
